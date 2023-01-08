@@ -4781,7 +4781,6 @@ ul {
 .tracking__content {
     position: relative;
     margin-left: 30px;
-    top: -7px;
 }
 
 .tracking__sub-title {
@@ -4794,7 +4793,7 @@ ul {
 }
 
 .tracking__title {
-    font-size: 36px;
+    font-size: 26px;
     color: var(--insur-white);
     font-weight: 700;
     letter-spacing: var(--insur-letter-spacing);
@@ -10977,7 +10976,7 @@ ul {
 .feature-four__top {
     position: relative;
     display: block;
-    padding: 100px 0 100px;
+    padding: 50px 0 50px;
 }
 
 .feature-four__top-inner {
@@ -12308,4 +12307,248 @@ body.boxed-wrapper {
 
 .get-insurance__progress {
     margin-bottom: 33px;
+}
+
+
+
+.team-area {
+    background-color: #f5f5f5
+}
+
+.single-team-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    -webkit-transition: all ease 0.8s;
+    transition: all ease 0.8s;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px
+}
+
+    .single-team-card.team-page-card {
+        background: #fff;
+        -webkit-box-shadow: 0 0 30px rgba(85,85,85,.1);
+        box-shadow: 0 0 30px rgba(85,85,85,.1);
+        border-radius: 20px
+    }
+
+    .single-team-card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background-color: var(--insur-base);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: all ease 0.8s;
+        transition: all ease 0.8s;
+        border-radius: 20px
+    }
+
+    .single-team-card .team-img {
+        -webkit-transition: all ease 0.8s;
+        transition: all ease 0.8s;
+        overflow: hidden;
+        border-radius: 20px
+    }
+
+        .single-team-card .team-img img {
+            border-radius: 20px;
+            -webkit-transition: all ease 0.8s;
+            transition: all ease 0.8s;
+            height: auto;
+            max-width: 100%;
+        }
+
+    .single-team-card .single-team-content {
+        text-align: center;
+        padding-top: 26px;
+        padding-bottom: 10px
+    }
+
+        .single-team-card .single-team-content h3 {
+            font-size: 24px;
+            margin-bottom: 6px;
+            -webkit-transition: all ease 0.8s;
+            transition: all ease 0.8s
+        }
+
+        .single-team-card .single-team-content p {
+            -webkit-transition: all ease 0.8s;
+            transition: all ease 0.8s
+        }
+
+        .single-team-card .single-team-content ul {
+            padding-left: 0;
+            padding-right: 0;
+            margin: 0;
+            margin-top: 15px;
+            -webkit-transition: all ease 0.8s;
+            transition: all ease 0.8s
+        }
+
+            .single-team-card .single-team-content ul li {
+                margin-right: 10px
+            }
+
+                .single-team-card .single-team-content ul li:last-child {
+                    margin-right: 0
+                }
+
+                .single-team-card .single-team-content ul li a {
+                    width: 36px;
+                    height: 36px;
+                    background: rgba(44,178,179,.09);
+                    border-radius: 100%;
+                    line-height: 40px;
+                    text-align: center;
+                    display: inline-block;
+                    color: #2cb2b3;
+                    font-size: 18px
+                }
+
+    .single-team-card:hover .team-img img {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+
+    .single-team-card:hover .single-team-content h3 {
+        color: #FFFFFF;
+    }
+
+    .single-team-card:hover .single-team-content p {
+        color: #FFFFFF;
+    }
+
+    .single-team-card:hover .single-team-content ul li a {
+        background-color: #FFFFFF;
+    }
+
+    .single-team-card:hover::after {
+        height: 100%;
+        opacity: 1;
+        visibility: visible
+    }
+.flow-container {
+    margin: 0vh 0vw;
+    margin-bottom: 8vh;
+    padding: 0vh 0;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: center;
+    justify-content: space-between !important;
+}
+.container__sources:before,
+.container__build:before,
+.container__deploy:before {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    color: #fff;
+    background: #ffb238;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 2.5px;
+}
+.container__sources {
+    display: flex;
+    border-radius: 8px;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    position: relative;
+    height: 150px;
+}
+    .card,
+    .container__sources div.sources--cms,
+    .container__build div {
+        line-height: 2;
+        background: transparent;
+        padding: 1.2rem 1rem;
+        border-radius: 4px;
+        z-index: 100;
+    }
+.sources--cms p {
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+}
+.container__sources:hover .sources--cms p {
+    color: #411fb2;
+    font-weight: bold;
+    font-size: 18px;
+}
+.arrowed {
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+    .arrowed div {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+.arrow-6 {
+    /* more triangle */
+    height: 10px;
+    width: 10px;
+    border: 1px solid rgba(94,66,139, 0.6);
+    border-width: 3px 3px 0 0;
+    transform: rotate(45deg);
+}
+
+    .arrow-6:before, .arrow-6:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-width: 3px 3px 0 0;
+    }
+
+    .arrow-6:before {
+        border: 1px solid rgba(94,66,139, 0.3);
+        border-width: 3px 3px 0 0;
+        /* top - distance minus border */
+        top: 7px;
+        left: -10px;
+    }
+
+    .arrow-6:after {
+        border: 1px solid rgba(94,66,139, 1);
+        border-width: 3px 3px 0 0;
+        /* top - distance plus border */
+        top: -13px;
+        left: 10px;
+    }
+
+.container__sources:hover .testimonial-one__shape-1 > img {
+    mix-blend-mode: normal;
+    opacity: 1;
+}
+.container__sources .testimonial-one__shape-1 > img {
+    width: 120px !important;
+}
+.feature-one__title.main-text{
+    background: #5e428b;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 18px;
+    color: #fff;
+}
+.feature-four__top-btn-box {
+    text-align: right;
+    margin-right: 4rem;
 }
