@@ -134,8 +134,8 @@
                                 </div>
                                 <div class="main-menu__main-menu-box-search-get-quote-btn">
                                     <!-- <div class="main-menu__main-menu-box-search">
-        <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
-    </div>-->
+                                        <a href="#" class="main-menu__search search-toggler icon-magnifying-glass"></a>
+                                    </div>-->
 
                                 </div>
                             </div>
@@ -159,7 +159,6 @@
     <div class="container-fluid">
         @RenderBody()
         <hr />
-
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer-bg" style="background-image: url(assets/images/backgrounds/site-footer-bg.png);">
@@ -298,7 +297,23 @@
         <!--Site Footer End-->
 
     </div>
-
+    <input type="checkbox" id="check">
+    <label class="chat-btn" for="check">
+        <i class="fas fa-comment"></i>
+        <i class="fa fa-close close"></i>
+    </label>
+    <div class="wrapper">
+        <div class="header">
+            <h6>Let's Chat - Online</h6>
+        </div>
+        <div class="text-center p-2"> <span>Please fill out the form to start chat!</span> </div>
+        <div class="chat-form">
+            <input type="text" class="form-control" placeholder="Name">
+            <input type="text" class="form-control" placeholder="Email">
+            <textarea class="form-control" placeholder="Your Text Message"></textarea>
+            <button class="btn btn-success btn-block btn-sm">Submit</button>
+        </div>
+    </div>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 

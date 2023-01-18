@@ -12552,3 +12552,105 @@ body.boxed-wrapper {
     text-align: right;
     margin-right: 4rem;
 }
+/*Chat Bot*/
+
+.chat-btn {
+    position: fixed;
+    left: 14px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    .chat-btn .close {
+        display: none
+    }
+
+    .chat-btn i {
+        transition: all 0.9s ease
+    }
+
+#check:checked ~ .chat-btn i {
+    display: block;
+    pointer-events: auto;
+    transform: rotate(180deg)
+}
+
+#check:checked ~ .chat-btn .comment {
+    display: none
+}
+
+.chat-btn i {
+    font-size: 22px;
+    color: #fff !important
+}
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #5e428b;
+    color: #fff;
+    font-size: 22px;
+    border: none
+}
+
+.wrapper {
+    position: fixed;
+    left: 20px;
+    overflow: hidden;
+    bottom: 80px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.4s;
+    z-index: 1000;
+    border: 1px solid #8d7da7;
+}
+
+#check:checked ~ .wrapper {
+    opacity: 1
+}
+
+.header {
+    padding: 13px;
+    background-color: #5e428b;
+    margin-bottom: 10px;
+    color: #fff;
+}
+    .header h6 {
+        color: #fff;
+    }
+    .chat-form {
+        padding: 15px
+    }
+
+    .chat-form input,
+    textarea,
+    button {
+        margin-bottom: 10px
+    }
+
+    .chat-form textarea {
+        resize: none
+    }
+
+.form-control:focus,
+.btn:focus {
+    box-shadow: none
+}
+
+.btn,
+.btn:focus,
+.btn:hover {
+    background-color: #5e428b;
+    border: #5e428b;
+}
+
+#check {
+    display: none !important
+}
