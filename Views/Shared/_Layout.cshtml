@@ -308,10 +308,15 @@
         </div>
         <div class="text-center p-2"> <span>Please fill out the form to start chat!</span> </div>
         <div class="chat-form">
-            <input type="text" class="form-control" placeholder="Name">
-            <input type="text" class="form-control" placeholder="Email">
-            <textarea class="form-control" placeholder="Your Text Message"></textarea>
-            <button class="btn btn-success btn-block btn-sm">Submit</button>
+            <input type="text" id="txtName" class="form-control" placeholder="Name">
+            <input type="text"  id="txtEmail" class="form-control" placeholder="Email">
+            <textarea class="form-control"  id="txtMessage" placeholder="Your Text Message"></textarea>
+            <select class="form-control" id="ddlOption">
+                <option value="value1">option 1</option>
+                <option value="value2">option 2</option>
+               
+            </select>
+            <button id="btnSubmit" class="btn btn-success btn-block btn-sm">Submit</button>
         </div>
     </div>
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
@@ -348,6 +353,31 @@
     <!-- template js -->
     <script src="assets/js/insur.js"></script>
     <script>
+        $("#btnSubmit").click(function () {
+            var objCCMaster = new Object();
+            objCCMaster.Name = $("#txtName").val();
+
+            objCCMaster.Email = $('#txtEmail').val();
+            objCCMaster.Message = $('#txtMessage').val();
+            objCCMaster.Option = $("#ddlOption option:selected").val();
+            var param = { objCCMaster: objCCMaster };
+            //var renewalData = $('#formRIMaster').serialize();
+            $.ajax({
+                type: "POST",
+                url: "/Home/AddMessage",
+                dataType: "json",
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                data: param,
+                success: function (res) {
+                    alert('Success');
+                },
+                error: function (err) {
+                    alert('Success');
+                }
+            })
+        });
+
+
         $("#ourCompany").click(function () {
 
             $('html,body').animate({
